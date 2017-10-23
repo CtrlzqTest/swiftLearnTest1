@@ -12,6 +12,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tabBarVC:BaseTabbarController = Utility.getControllerWithStoryBoardId(kTabbarControllerId) as! BaseTabbarController
+        self.addChildViewController(tabBarVC)
+        self.view.addSubview(tabBarVC.view)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
